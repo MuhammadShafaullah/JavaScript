@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <h1>4 Pillars of DOM </h1>
+    <h3>1. Selection of an Element</h3>
+    <h3>2. Changing HTML </h3>
+    <h3>1. Changing CSS</h3>
+    <h3>1. Event Listener</h3>
+
+    <div id="mydiv">
+
+    </div>
+    <button id="onbtn">
+       ON
+    </button>
+
+    <button id="offbtn">
+        OFF
+     </button>
+
+
+    <script>
+       const a=document.getElementById("mydiv")
+       const onbtn=document.getElementById("onbtn")
+       const offbtn=document.getElementById("offbtn")
+       a.style.width="400px"
+       a.style.height="400px"
+       a.style.border= "2px solid black"
+       
+
+      onbtn.addEventListener("click",function(){
+        a.style.backgroundColor="yellow"
+       })
+
+       offbtn.addEventListener("click",function(){
+        a.style.backgroundColor="gray"
+       })
+
+    </script>
+
+    
+</body>
+</html>
