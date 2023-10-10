@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" name="inputfiled" id="If1">
+
+    <select name="cars" id="math">
+        <option value="plus">plus</option>
+        <option value="mul">Multiplay</option>
+        <option value="minus">minus</option>
+        <option value="divide">Divide</option>
+    </select>
+
+    <input type="text" name="inputfiled" id="If2">
+
+    <button id="btn">Click me</button>
+
+    <div id="result"></div>
+
+    <script>
+         const If1= document.getElementById("If1")
+         const If2= document.getElementById("If2")
+         const btn= document.getElementById("btn")
+         const math= document.getElementById("math")
+         const result= document.getElementById("result")
+
+         btn.addEventListener("click",function(){
+           
+            if(math.value == "plus"){
+                const sum = parseInt(If1.value) + parseInt(If2.value);
+                result.innerHTML=" Sum of two num:" + sum
+            }
+            if(math.value=="mul"){
+                const mul = parseInt(If1.value) * parseInt(If2.value);
+                result.innerHTML="Multiplication of two num:" + mul
+            }
+            if(math.value=="minus"){
+                const minus = parseInt(If1.value) - parseInt(If2.value);
+                result.innerHTML= "Minus of two num:" + minus
+            }
+            if(math.value=="divide"){
+                const divide = parseInt(If1.value) / parseInt(If2.value);
+                result.innerHTML="Division of two num:" + divide
+            }
+
+          
+         })
+
+       
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javaSccript</title>
+</head>
+<body>
+    <script>
+
+        console.log("Hi There its Table")
+        function table(val1,end){
+            for (let i = 1; i <= end; i++) {   // loop through the number upto given value
+                if(i==5){
+                    continue
+                }
+                console.log(val1 + " * " + i + " = " + i*val1)
+              
+                if(i==8){
+                    break
+                }
+            }
+        }
+        table(1,10)
+    </script>
+</body>
+</html>

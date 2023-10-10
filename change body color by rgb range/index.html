@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div style="display: flex;  flex-direction: column; width:400px">
+  <input type="range" id="red" min="0" max="255" />
+
+  <input type="range" id="green" min="0" max="255" />
+
+  <input type="range" id="blue" min="0" max="255" />
+
+  </div>
+
+  <script>
+    const red=document.getElementById("red");
+    const green=document.getElementById("green");
+    const blue=document.getElementById("blue");
+
+    var redValue = red.value;
+    var greenValue = green.value;
+    var blueValue = blue.value;
+    console.log("1st red"+redValue)
+
+    red.addEventListener("input", function (event) {
+      redValue = event.target.value;
+      console.log("2st red"+redValue)
+      changeColor(redValue, greenValue, blueValue)
+    });
+
+    green.addEventListener("input", function (event) {
+      greenValue = event.target.value;
+      changeColor(redValue, greenValue, blueValue)
+    });
+
+    blue.addEventListener("input", function (event) {
+      blueValue = event.target.value;
+      changeColor(redValue, greenValue, blueValue)
+    });
+
+
+    function changeColor(red, green, blue) {
+      document.body.style.backgroundColor = `rgb(${red},${green},${blue})`;
+    }
+
+
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        // Even / odd
+
+        let myarray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let even = [];
+        let odd = [];
+
+        function evenodd(arr) {
+
+            for (let i = 0; i <= myarray.length; i++) {
+                if (myarray[i] % 2 === 0) {
+                    even.push(myarray[i])
+                }
+                if (myarray[i] % 2 !== 0) {
+                    odd.push(myarray[i])
+                }
+            }
+
+        }
+        evenodd(myarray)
+
+        // for (let y = 0; y <= even.length; y++) {
+          //  console.log("MY Even Number", even[y])
+       // }
+
+        for (let x = 0; x <= odd.length; x++) {
+            console.log("MY odd Number", odd[x])
+        }
+
+        // Seprate String and numbers
+        let stringnum = [1, "A", 2, "B", 3, "C"];
+        let numbers = [];
+        let strings = [];
+
+        for (let i = 0; i < stringnum.length; i++) {
+            if (typeof stringnum[i] === "number") {
+                numbers.push(stringnum[i]);
+            } else if (typeof stringnum[i] === "string") {
+                strings.push(stringnum[i]);
+            }
+        }
+
+        console.log("Numbers:", numbers);
+        console.log("Strings:", strings);
+
+        // return squir root
+        let myroot = [2, 3, 5];
+        let squareRoots = [];
+
+        for (let i = 0; i < myroot.length; i++) {
+            let sqrt = Math.sqrt(myroot[i]);
+            squareRoots.push(sqrt);
+        }
+
+        console.log("Square Roots:", squareRoots);
+
+
+        
+        // find largest number from given Array
+        let array = [4, 9, 10, 35, 17, 13];
+        let largest = array[0]; // Assume the first element is the largest
+
+        for (let i = 1; i < array.length; i++) {
+            if (array[i] > largest) {
+                largest = array[i];
+            }
+        }
+
+        console.log("The largest number is:", largest);
+
+
+
+
+
+    </script>
+</body>
+
+</html>
