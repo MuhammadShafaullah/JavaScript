@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn">Create Box</button>
+    <div id="parent">
+
+    </div>
+
+
+
+    <script>
+        const btn = document.getElementById("btn");
+        let parent = document.getElementById("parent");
+        const box = document.getElementsByClassName("box");
+        
+        
+        btn.addEventListener("click", function () {
+        
+          html = parent.innerHTML;
+          html += "<div class='box'></div>";
+          parent.innerHTML = html;
+         
+   
+
+          if (box.length > 1) {
+            for (let i = 0; i < box.length; i++) {
+              box[i].addEventListener("click", function (event) {
+                if (i % 2 == 0) {
+                  event.target.style.backgroundColor = "red"
+                } else {
+                  event.target.style.backgroundColor = "gold"
+                }
+              });
+            }
+          };
+
+         })
+        
+
+    </script>
+</body>
+
+</html>

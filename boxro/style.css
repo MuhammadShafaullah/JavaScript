@@ -1,0 +1,22 @@
+#box{
+    height: 50px;
+    width: 50px;
+  
+    display: inline-block;
+    margin: 5px;
+}
+.odd{
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    margin: 5px; 
+    
+    display: inline-block;
+}
+.even{
+    height: 50px;
+    width: 50px;
+    background-color: gray;
+    margin: 5px; 
+    display: inline-block;
+}

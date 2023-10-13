@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+
+    </div>
+    <button id="btn">Click</button>
+
+<script>
+     
+    const box = document.getElementById('box');
+    const btn=document.getElementById("btn")
+    let even=document.getElementsByClassName("even")
+     ary=[]
+    btn.addEventListener("click",function(){
+       
+            html=box.innerHTML
+            html += "<div class='even'></div>"
+            box.innerHTML = html
+
+
+        if(even.length>1){
+            for(let i= 0; i<even.length; i++){
+                box[i].addEventListener("click",function(){
+                    console.log(i)
+                    if( i%2==0 ){
+                        alert("Even")
+                    }
+                   
+                })
+            }
+        }    
+
+   
+    })
+    
+   
+
+</script>
+
+</body>
+</html>
