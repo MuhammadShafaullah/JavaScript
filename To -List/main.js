@@ -1,6 +1,5 @@
 const ary = [];
 
-console.log(ary)
 
 const save=document.getElementById("save");
 const data=document.getElementById("data");
@@ -11,6 +10,7 @@ save.addEventListener("click",function(){
 
      
     ary.push(data.value)
+    alert("Data Saved!")
     data.value=''
     let html = "";
 
@@ -24,6 +24,8 @@ ary.forEach(function(ary){
 result.innerHTML=html
     
 })
+
+
 
 
 
