@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+    <script>
+
+        //=============================================filter method ==========================================================
+        const nums = [54, 34, 85, 12, 0, 34, 33, 87];
+
+        //find a number which is greater than 20 and less than 50, with find method
+        const result = nums.filter((word) => word > 20 && word < 50);
+        console.log(">20 and <50:", result);
+
+        //filter out evens from nums array with the help of filter methods
+        let even = nums.filter(function (element) {
+            return element % 2 == 0;
+        });
+        console.log("Even Numbers:", even);
+
+        //filter out odds from nums array with the help of filter methods
+        let odd = nums.filter(function (element) {
+            return element % 2 !== 0;
+        });
+        console.log("Odd Numbers:", odd);
+
+        //manipulate each element of array with the help of map function logic is
+        //multiply each element with 2 and from result minus 5
+
+        let modifiedArr = nums.map(function (element) {
+            mul = element * 2;
+            return mul - 5
+        });
+        console.log(modifiedArr);
+
+        //=============================================find method ==========================================================
+
+
+        const employees = [
+            {
+                "name": "Adam",
+                "age": "64",
+                "salary": "50000"
+            },
+            {
+                "name": "Benjamin",
+                "age": "72",
+                "salary": "85000"
+            },
+            {
+                "name": "Steven",
+                "age": "35",
+                "salary": "85000"
+            },
+            {
+                "name": "Taylor",
+                "age": "18",
+                "salary": "60000"
+            },
+            {
+                "name": "Evelyn",
+                "age": "59",
+                "salary": "45000"
+            },
+            {
+                "name": "Rebecca",
+                "age": "22",
+                "salary": "55000"
+            },
+            {
+                "name": "Audrey",
+                "age": "47",
+                "salary": "67000"
+            },
+            {
+                "name": "Sara",
+                "age": "46",
+                "salary": "95000"
+            },
+            {
+                "name": "Courtney",
+                "age": "46",
+                "salary": "76000"
+            },
+            {
+                "name": "Layla",
+                "age": "66",
+                "salary": "23000"
+            }
+        ];
+
+        //find out all users age greater than 35 with the help of filter method
+        const age = employees.filter(employee => employee.age > 35);
+        console.log("Age > 35:", age);
+
+        //find out all users salay less than 40k with the help of filter method
+        const salary = employees.filter(employee => employee.salary < 40000);
+        console.log("Salary < 40k:", salary);
+
+        //findout a user whose salary is less than 30 thousand
+        const salar30k = employees.filter(employee => employee.salary < 30000);
+        console.log("Salary < 30k:", salar30k);
+
+
+
+        //if a user earning more than 30k his tax is 2.5%
+        //if a user earning more than 50k tax is 5%;
+        
+
+        // Define tax rates
+      
+
+        // Calculate and update tax for each employee
+        // Use map to add "grossSalary" and "netSalary" keys
+        const myresult = employees.map((element) => {
+            if (element.salary > 30000) {
+                let tax= element.salary * 0.025;
+                element.tax=tax;
+                element.gross_salary=element.salary-tax;
+                return element;
+            }
+            else if (element.salary > 50000) {
+                let tax= element.salary * 0.05;
+                element.tax=tax;
+                element.gross_salary=element.salary-tax;
+                return element;
+            }
+        })
+        console.log(myresult);
+
+
+    </script>
+</body>
+
+</html>
