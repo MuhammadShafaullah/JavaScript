@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    console.log("leaveing from home");
+    const myPromise = new Promise((resolve, rejected) => {
+        const pie = 314;
+        setTimeout( () => {
+            if(pie == 314) {
+                resolve("TRUE")
+            } else {
+                rejected("FALSE");
+            }
+        }, 3000);
+    })
+
+    console.log("MY Promise",myPromise);
+    myPromise.then( (res) => 
+    {console.log("resolve case",res)})
+    .catch( (res) => {
+        console.log("Error case",res);
+    }).finally( (res) => {
+        console.log("i will run always")
+    });
+    console.log("I reaced there");
+
+    // then() method is used to handle the resolved promise value
+    // catch() method is used to handle the error promise value
+    // finally() method will run always in both cases
+</script>
+</body>
+</html>

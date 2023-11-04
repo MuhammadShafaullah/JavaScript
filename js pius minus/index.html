@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div id="num">
+
+    </div>
+
+    <button id="add">+</button>
+    <button id="minus">-</button>
+
+
+    <script>
+        let num=0;
+        const addBtn = document.getElementById('add');
+        const minusBtn = document.getElementById('minus');
+        const displayNum = document.getElementById('num');
+        
+
+        addBtn.addEventListener("click",function(){
+            
+            num1= num+1;
+            displayNum.innerHTML= num;
+           })
+
+
+    </script>
+</body>
+</html>
